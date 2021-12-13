@@ -26,7 +26,7 @@ public class Brick : MonoBehaviour
     private void OnCollisionEnter(Collision collision) {
 
         hits--;
-
+        GameManager.Instance.Score += point;
         if (hits <= 0) {
 
             Destroy(gameObject);
